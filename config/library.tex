@@ -1,0 +1,50 @@
+% ===========================
+% Configuración general
+% ==========================
+% Idioma y codificación
+\usepackage[utf8]{inputenc}   % Asegura compatibilidad de caracteres
+\usepackage[T1]{fontenc}      % Mejor codificación para PDF y acentos
+\usepackage[spanish]{babel}   % Traduce nombres (Tabla, Figura, etc.)
+\usepackage{lmodern}          % Fuente moderna legible
+
+% Márgenes
+\usepackage[a4paper, margin=1in]{geometry}
+
+% ===========================
+% Paquetes matemáticos
+% ===========================
+\usepackage{amsmath, amssymb, amsthm} % Notación matemática avanzada
+\usepackage{siunitx}                  % Para unidades (ej: \SI{3.5}{\hour})
+
+% ===========================
+% Tablas y figuras
+% ===========================
+\usepackage{graphicx}      % Insertar imágenes
+\usepackage{caption}       % Personalizar leyendas
+\usepackage{subcaption}    % Subfiguras si se requiere
+\usepackage{booktabs}      % Tablas más elegantes
+\usepackage{array}         % Mejor control de columnas
+\usepackage{multirow}      % Filas combinadas
+\usepackage{diagbox}       % Tablas con diagonales
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{xcolor,colortbl} % Colores en tablas
+
+% ===========================
+% Texto y párrafos
+% ===========================
+\usepackage{parskip}       % Elimina sangría en párrafos
+\setlength{\parindent}{0pt} % Si quieres asegurarlo
+\setlength{\parskip}{0.8em} % Espaciado entre párrafos
+
+% ===========================
+% Extras útiles
+% ===========================
+\usepackage{float}    % Controlar posición de tablas/figuras (H)
+\usepackage{enumitem} % Listas personalizadas
+\usepackage{titlesec} % Mejor control de títulos
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+

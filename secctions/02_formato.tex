@@ -1,0 +1,29 @@
+% secctions/2_formato.tex
+\section{Estructuración, Formateo Tipográfico y Elementos de Bloque}
+
+\subsection{Jerarquía de Secciones y Párrafos}
+La organización lógica de un documento extenso en \LaTeX\ se rige por un sistema jerárquico de seccionamiento. Esta estructuración no solo define el tamaño y estilo de los encabezados, sino que alimenta de forma automática metadatos estructurales del documento, como la generación de la tabla de contenidos. Los comandos principales incluyen \texttt{\textbackslash section\{...\}}, \texttt{\textbackslash subsection\{...\}} y \texttt{\textbackslash subsubsection\{...\}}. Es importante mencionar que \LaTeX\ ofrece la posibilidad de generar secciones no numeradas mediante la adición de un asterisco a la macro, como en \texttt{\textbackslash section*\{...\}}, excluyendo así dicho apartado del índice general.
+
+En cuanto a la manipulación de párrafos, \LaTeX\ procesa los bloques de texto de manera dinámica. Un nuevo párrafo se genera insertando una o más líneas en blanco en el código fuente, lo que tradicionalmente aplica una sangría automática (\textit{identación}) en la primera línea. Para forzar un salto de línea sin iniciar un nuevo párrafo lógico, se emplea el comando \texttt{\textbackslash newline} o su equivalente estructural de doble barra invertida \texttt{\textbackslash\textbackslash}. Además, el motor tipográfico de \LaTeX\ utiliza algoritmos avanzados para la partición silábica y la justificación del texto a ambos márgenes por defecto, aunque existen entornos de alineación específicos (\texttt{flushleft}, \texttt{flushright} y \texttt{center}) para alterar este comportamiento estándar.
+
+\subsection{Formateo Tipográfico Básico}
+El control tipográfico en \LaTeX\ se ejecuta mediante comandos que modifican atributos específicos del texto encapsulado en sus argumentos. Para resaltar o enfatizar información crucial, se dispone de los comandos \texttt{\textbackslash textbf\{...\}} para la tipografía en negrita, \texttt{\textbackslash textit\{...\}} para la cursiva (itálica) y \texttt{\textbackslash underline\{...\}} para el subrayado continuo. Adicionalmente, el comando \texttt{\textbackslash emph\{...\}} aplica un énfasis semántico y contextual, alternando inteligentemente entre estilos dependiendo del entorno tipográfico activo en ese momento.
+
+Respecto a las familias de fuentes tipográficas, el sistema soporta la transición fluida entre texto normal con remates (serif) mediante \texttt{\textbackslash textrm\{...\}}, texto sin remates (sans serif) con \texttt{\textbackslash textsf\{...\}} y fuentes monoespaciadas, las cuales son esenciales para la representación de código fuente, identificadores técnicos o comandos, a través de la macro \texttt{\textbackslash texttt\{...\}}.
+
+\subsection{Entornos Estructurales: Listas y Tablas}
+Para la representación de información enumerada o tabulada, \LaTeX\ maneja entornos cerrados que garantizan un espaciado matemático y una alineación estrictamente consistente.
+
+\subsubsection{Listas y Enumeraciones}
+Existen tres tipologías principales de listas para la organización de datos en bloque:
+\begin{itemize}
+    \item \textbf{No ordenadas (\texttt{itemize}):} Utilizan viñetas estándar para cada elemento, ideales para agrupaciones de elementos sin una jerarquía secuencial.
+    \item \textbf{Ordenadas (\texttt{enumerate}):} Generan secuencias numéricas o alfabéticas automáticas, fundamentales para algoritmos o pasos procedimentales.
+    \item \textbf{Descriptivas (\texttt{description}):} Permiten asociar un término específico (resaltado en negrita por defecto) a su respectiva definición o bloque de texto.
+\end{itemize}
+En todos los casos documentados, la instanciación de un nuevo nodo o elemento dentro del entorno requiere la invocación explícita del comando \texttt{\textbackslash item}.
+
+\subsubsection{Representación Tabular}
+La visualización tabular de datos exige una mayor rigurosidad sintáctica en el código fuente. El entorno \texttt{tabular} requiere como argumento obligatorio la declaración de sus columnas y la alineación intrínseca de cada una, denotada por los caracteres \texttt{l} (izquierda), \texttt{c} (centro) o \texttt{r} (derecha). La inserción de bordes verticales se logra mediante la inclusión del carácter de barra vertical (\texttt{|}) en la declaración de alineación.
+
+Por otro lado, las líneas divisorias horizontales se invocan con el comando \texttt{\textbackslash hline}. A nivel de contenido, la separación de celdas adyacentes dentro de una misma fila se efectúa con el símbolo \textit{ampersand} (\texttt{\&}), y la culminación de un registro o fila se dicta mediante un salto de línea explícito (\texttt{\textbackslash\textbackslash}).
