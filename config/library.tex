@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}   % Asegura compatibilidad de caracteres
 \usepackage[T1]{fontenc}      % Mejor codificación para PDF y acentos
 \usepackage[spanish]{babel}   % Traduce nombres (Tabla, Figura, etc.)
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 \usepackage{lmodern}          % Fuente moderna legible
 
 % Márgenes
@@ -47,4 +48,4 @@
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
-
+\usepackage[hidelinks]{hyperref}

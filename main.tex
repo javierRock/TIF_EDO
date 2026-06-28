@@ -1,8 +1,8 @@
 
 \documentclass[12pt]{report}
-\usepackage[hidelinks]{hyperref}
 \input{config/library}
 \begin{document}
+\pagenumbering{gobble}
 \begin{titlepage}
 
 \centering
@@ -19,9 +19,9 @@
 			\includegraphics[scale=0.3]{assets/Escudo_UNSA.png}
 		\end{figure}
 	    \vspace{5 mm}
-        {\large \textbf{Titulo:} }\\
+        {\large \textbf{Título:} }\\
         \vspace{2 mm} 
-        {\large ``Introducción Práctica a LaTeX: Formato, Matemáticas y Trabajo Offline'' }\\
+        {\large ``MODELADO DEL ACCESO A INTERNET EN HOGARES DEL PERÚ MEDIANTE ECUACIONES DIFERENCIALES, 2014-2024'' }\\
         \vspace{5 mm}
         {\large \textbf{Asignatura:} }\\
         \vspace{2 mm} 
@@ -47,12 +47,20 @@
 		\vspace{3 mm}	
 		{\large \textbf{2026} }
 \end{titlepage}
+\pagenumbering{roman}
 \tableofcontents
-\newpage
+\clearpage
+\pagenumbering{arabic}
 
-\input{secctions/01_introduccion}
-\input{secctions/02_formato}
-\input{secctions/03_visual}
-\input{secctions/04_offline}
+% Estructura modular del informe. Para futuras ampliaciones, agregar
+% nuevos archivos numerados en secctions/ y registrarlos en este bloque.
+\input{secctions/01_titulo}
+\input{secctions/02_planteamiento}
+\input{secctions/03_formulacion}
+\input{secctions/04_objetivos}
+\input{secctions/05_fuentes_datos}
+\input{secctions/06_datos}
+\input{secctions/07_modelos}
+\input{secctions/08_referencias}
 
 \end{document}

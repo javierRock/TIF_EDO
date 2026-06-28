@@ -1,0 +1,43 @@
+\section{Modelos matemáticos propuestos}
+
+En esta primera fase se presentan los modelos que se pretenden utilizar para analizar el acceso a internet en los hogares del Perú.
+
+\subsection{Modelo 1: acceso a internet total}
+
+Primero se analizará el acceso total a internet en los hogares del Perú. Para ello se usará la variable $I(t)$, que representa el porcentaje total de hogares con internet. Como este porcentaje no puede crecer de forma infinita, se considerará un modelo que tenga como límite máximo el 100\%.
+
+Para la comparación inicial se puede considerar el modelo exponencial:
+\begin{equation}
+    \frac{dI}{dt}=kI,
+\end{equation}
+donde $k$ representa la tasa de crecimiento del acceso total a internet.
+
+Además, debido a que el porcentaje tiene un límite superior, se propone el modelo logístico:
+\begin{equation}
+    \frac{dI}{dt}=rI\left(1-\frac{I}{K}\right), \qquad K=100,
+\end{equation}
+donde $r$ es la tasa de crecimiento y $K$ representa la capacidad máxima expresada en porcentaje.
+
+\subsection{Modelo 2: comparación entre zona urbana y zona rural}
+
+Luego se estudiará el acceso a internet según área de residencia. Para esto se usarán las variables $U(t)$, que representa el porcentaje de hogares urbanos con internet, y $R(t)$, que representa el porcentaje de hogares rurales con internet. Esta comparación permitirá observar si el crecimiento del acceso a internet es similar o diferente entre ambas zonas.
+
+El comportamiento de ambas áreas se puede representar mediante modelos logísticos independientes:
+\begin{align}
+    \frac{dU}{dt} &= r_U U\left(1-\frac{U}{K_U}\right), \\
+    \frac{dR}{dt} &= r_R R\left(1-\frac{R}{K_R}\right).
+\end{align}
+
+\subsection{Metodología propuesta para la segunda fase}
+
+En la segunda fase del trabajo se desarrollarán los cálculos matemáticos y la comparación de resultados. Los pasos serán:
+
+\begin{itemize}
+    \item Organizar los datos en función del tiempo $t$.
+    \item Graficar los datos reales de internet total, internet urbano, internet rural y computadoras.
+    \item Plantear el modelo de ecuación diferencial correspondiente.
+    \item Estimar los parámetros de cada modelo.
+    \item Comparar los resultados de los modelos con los datos reales.
+    \item Interpretar los resultados obtenidos.
+    \item Elaborar conclusiones.
+\end{itemize}
